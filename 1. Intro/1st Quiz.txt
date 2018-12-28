@@ -1,0 +1,24 @@
+1. ***What is a variable in C++?***
+Ans: A  **variable**  in C++ is simply an object that has a name.
+
+2. ***What is Definition of a variable?***
+Ans: A variable is a placeholder in computer memory to hold some value. 
+
+3. ***What is Instantiation of a variable?***
+Ans: Instantiation literally means "example of something". So instantiation of variables means **declaring** a variable e.g. to instantiate an integer x we will say <code> int x; </code>
+
+4. ***What is the difference between an l-value and an r-value?***
+Ans: An **l-value** is a value with persistent memory address and **r-value** is something without proper persistent memory address. e.g. most integers are r-values and most variables are l-values. 
+
+5. ***What is an uninitialized variable and what kind of behaviour can you expect from such a variable?***
+Ans: Uninitialized variable is a variable without any proper value assigned to it hence C++ compiler will assign any memory to it whatever it can find suitable (randomly) like garbage value. It can lead to many unexpected results. 
+
+6. ***What is undefined behaviour?***
+Ans: Below can be some examples of "undefined behavior".
+* Your program produces an incorrect result consistently.
+* Your program produces different results every time it is executed.
+* Your program behaves inconsistently (sometimes produces the correct result, sometimes not).
+* Your program seems like its working but produces incorrect results later in the program.
+* Your program crashes, either immediately or later.
+* Your program works on some compilers but not others.
+* Your program works until you change some other seemingly unrelated code.

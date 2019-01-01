@@ -4,19 +4,18 @@ using namespace std;
 
 int main()
 {
-    int test = 5;
-    bool d = true;
-    bool e = false;
-    bool k = e && d;
-    bool k2 = e || d;
+    int a = 4;
+    cout <<"variable a has value: " << a <<endl;
+    cout <<"address of a is: "<< &a <<endl;
+    char t4 = 'a';
+    cout <<"Char t4 has value: " << t4 <<endl;
+    string new1 = "First string";
+    cout <<"String new1 has value: " << new1 <<endl;
 
-    double h = 0.3;
-    double j = 0.9;
-    int x = h + j;
-    cout << "Hello world!" << test << endl;
-    cout << "Value of K is (AND): " <<k << endl;
-    cout << "Value of L is (OR): " <<k2 << endl;
-    cout << "Value of x is : " <<x << endl;
-    cout <<"Because x is casted to int" <<endl;
+    string name1 = "";
+    cout <<"Please enter your name: ";
+    cin >> name1;
+    cout<< "Your name is: " << name1 <<endl;
+
     return 0;
 }

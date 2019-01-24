@@ -2,34 +2,15 @@
 
 using namespace std;
 
-void test() {
-    cout << "Testing testing" <<endl;
-
-}
-
-int returnFive() {
-    return 5;
-}
-
-int multiply(int a, int b) {
-    return a * b;
-}
-
-string createGreeting(string name) {
-    return "Greetings " + name;
-}
-
 int main() {
-    test();
-    test();
-    test();
-    cout << returnFive() << endl;;
-    cout << multiply (5,9) << endl;
-    string name;
-    cout <<"Enter some name for greetings!" <<endl;
-    cin >> name;
-    string greetString = createGreeting(name);
-    cout << greetString;
+    int num = -5;
 
+    if (num > 5) {
+        cout << "Num is greater than 5" <<endl;
+    } else if (num == 5) {
+        cout <<"Num value is Five = " <<num << endl;
+    } else {
+        cout <<"Num is less than 5" << endl;
+    }
     return 0;
 }

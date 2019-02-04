@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+struct Rectangle {
+    int length;
+    int width;
+};
+
+
+
+int main()
+{
+    Rectangle rects[4];
+    rects[0].length = 4;
+    rects[0].width = 3;
+    cout << "Hello world!" << endl;
+    return 0;
+}

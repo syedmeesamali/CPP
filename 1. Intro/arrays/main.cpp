@@ -12,13 +12,17 @@ int area(int a, int b) {
 
 int main()
 {
-    int x = 10;
-    while (x >= 0) {
-        if (x == 0)
-            cout <<"Blast-off" << endl;
+    int x = 0;
+    while (x <= 50) {
+        if (x < 10)
+            cout <<"0" << x << endl;
         else
             cout << x << endl;
-        --x;
+
+        if (x % 10 == 0)
+            cout << "\n" <<endl;
+
+        ++x;
         }
     return 0;
 }

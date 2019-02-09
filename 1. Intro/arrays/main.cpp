@@ -1,28 +1,25 @@
 #include <iostream>
 using namespace std;
 
-struct Rectangle {
-    int length;
-    int width;
-};
-
-int area(int a, int b) {
-    return a*b;
-}
-
 int main()
 {
-    int x = 0;
-    while (x <= 50) {
-        if (x < 10)
-            cout <<"0" << x << endl;
-        else
-            cout << x << endl;
+    string tmp;
 
-        if (x % 10 == 0)
-            cout << "\n" <<endl;
+    cout <<"Enter the number: "<<endl;
+    cin >> tmp;
 
-        ++x;
+    bool isNumber = true;
+
+    for (int i=0; i<tmp.length(); i++) {
+        if (!(tmp[i] >=45 && tmp[i] <=57)) {
+            isNumber = false;
         }
+    }
+
+    if (isNumber)
+        cout <<"number entered properly" <<endl;
+    else
+        cout <<"Number wasn't entered properly"<<endl;
+
     return 0;
 }

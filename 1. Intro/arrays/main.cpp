@@ -3,23 +3,16 @@ using namespace std;
 
 int main()
 {
-    string tmp;
 
-    cout <<"Enter the number: "<<endl;
-    cin >> tmp;
-
-    bool isNumber = true;
-
-    for (int i=0; i<tmp.length(); i++) {
-        if (!(tmp[i] >=45 && tmp[i] <=57)) {
-            isNumber = false;
+    for (int i = 0; i<10; i++ ) {
+        for (int j=0; j<10; j++) {
+            if (i == j)
+                continue;
+            cout.width(4);
+            cout << i * j;
         }
     }
 
-    if (isNumber)
-        cout <<"number entered properly" <<endl;
-    else
-        cout <<"Number wasn't entered properly"<<endl;
 
     return 0;
 }

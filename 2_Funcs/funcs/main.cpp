@@ -10,11 +10,17 @@ void areaTriangle(double, double);
 int main()
 {
     int choice;
+    char cont;
     //Initialize the main menu
-    initMenu();
-    cin >> choice;
+    do
+    {
+        initMenu();
+        cin >> choice;
+        menuDecision(choice);
+        cout << "Do you want to continue? (Y/N) " <<endl;
+        cin >> cont;
+    } while (cont == 'y' || cont == 'Y');
 
-    menuDecision(choice);
     return 0;
 }
 

@@ -17,8 +17,13 @@ int main()
         initMenu();
         cin >> choice;
         menuDecision(choice);
-        cout << "Do you want to continue? (Y/N) " <<endl;
-        cin >> cont;
+        do
+        {
+            cout << "Do you want to continue? (Y/N) " <<endl;
+            cin >> cont;
+        } while (cont != 'y' && cont != 'Y' && cont != 'n' && cont != 'N');
+
+
     } while (cont == 'y' || cont == 'Y');
 
     return 0;

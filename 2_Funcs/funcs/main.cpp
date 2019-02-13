@@ -6,6 +6,7 @@ void menuDecision(int);
 void areaCircle(double);
 void areaRect(double, double);
 void areaTriangle(double, double);
+bool isValid();
 
 int main()
 {
@@ -15,12 +16,18 @@ int main()
     do
     {
         initMenu();
-        cin >> choice;
+
+        while (!(cin >> choice))
+        {
+
+        }
+
         menuDecision(choice);
         do
         {
             cout << "Do you want to continue? (Y/N) " <<endl;
             cin >> cont;
+            cin.ignore();
         } while (cont != 'y' && cont != 'Y' && cont != 'n' && cont != 'N');
 
 
@@ -45,8 +52,8 @@ void menuDecision(int choice)
     switch(choice)
     {
         case 1:
-            cout << "Enter radius of circle: ";
-            cin >> r;
+             cout << "Enter radius of circle: " <<endl;
+             do { cin >> r; } while(!isValid());
             areaCircle(r);
             break;
         case 2:
@@ -68,20 +75,38 @@ void menuDecision(int choice)
     }
 }
 
+//Function to calculate area of Circle: PI * radius * radius
 void areaCircle(double r)
 {
     double result = 3.141 * r * r;
     cout <<"The area of circle is: " <<result << endl;
 }
 
+//Function to calculate area of Rectangle: Length x Width
 void areaRect(double a, double b)
 {
     double result = a * b;
     cout <<"The area of rectangle is: " <<result << endl;
 }
 
+//Function to calculate area of Triangle: 1/2 x base x height
 void areaTriangle(double b, double h)
 {
     double result = 0.5 * b * h;
     cout <<"The area of triangle is: " <<result << endl;
+}
+
+//Below function checks for validity of input
+bool isValid()
+{
+    if (cin.rdstate())
+    {
+        cin.clear();
+        cin.ignore(numeric_limits < streamsize > :: max(), '\n');
+        initMenu();
+        cout << error_msg << endl;
+        return false;
+    }
+
+    return true;
 }

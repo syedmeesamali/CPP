@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+void initMenu();
+void menuDecision(int);
+double areaCircle(double);
+
+
+
+int main()
+{
+    cout << "Hello world!" << endl;
+    return 0;
+}

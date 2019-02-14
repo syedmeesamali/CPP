@@ -1,4 +1,6 @@
 #include <iostream>
+#include <limits>
+
 using namespace std;
 
 void initMenu();
@@ -19,7 +21,10 @@ int main()
 
         while (!(cin >> choice))
         {
-
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            initMenu();
+            cout << "You have typed wrong character !" << endl;
         }
 
         menuDecision(choice);
@@ -27,7 +32,7 @@ int main()
         {
             cout << "Do you want to continue? (Y/N) " <<endl;
             cin >> cont;
-            cin.ignore();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
         } while (cont != 'y' && cont != 'Y' && cont != 'n' && cont != 'N');
 
 
@@ -52,8 +57,9 @@ void menuDecision(int choice)
     switch(choice)
     {
         case 1:
+             do {
              cout << "Enter radius of circle: " <<endl;
-             do { cin >> r; } while(!isValid());
+             cin >> r; } while(!isValid());
             areaCircle(r);
             break;
         case 2:
@@ -102,9 +108,8 @@ bool isValid()
     if (cin.rdstate())
     {
         cin.clear();
-        cin.ignore(numeric_limits < streamsize > :: max(), '\n');
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         initMenu();
-        cout << error_msg << endl;
         return false;
     }
 

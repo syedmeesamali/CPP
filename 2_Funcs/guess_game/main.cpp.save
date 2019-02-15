@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i = 0;
+    int guess = 0;
+    int num = 37;
+    count = 0
+    do
+    {
+        cout <<"Enter guess value: " << endl;
+        cin >> guess ;
+        count ++ ;
+        if (guess == num)
+        
+    } while (count < 5);
+
+    return 0;
+}

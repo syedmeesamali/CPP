@@ -8,6 +8,14 @@ public:
     int age;
     string gender;
 
+    //Below is a constructor for class person
+    person(string a, int b, string c)
+    {
+        name = a;
+        age = b;
+        gender = c;
+    }
+
     void printInfo()
     {
         cout <<" Name is: " << name <<endl;
@@ -19,7 +27,7 @@ public:
 
 int main()
 {
-    person ali = {"Meesam", 31, "male"};
+    person ali("Meesam", 31, "male");
     ali.printInfo();
     return 0;
 }

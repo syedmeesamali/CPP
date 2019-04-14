@@ -1,7 +1,15 @@
 #include <iostream>
 using namespace std;
-enum weekDays {MO = 1, TU, WE, TH, FR, SA, SU};
+
+enum weekDays {SA, SU, MO = 1, TU, WE, TH, FR};
 string getDay(weekDays);
+
+int main()
+{
+    weekDays d = SU;
+    cout <<weekDays() << d << endl;
+    return 0;
+}
 
 string getDay(weekDays d)
 {
@@ -22,12 +30,7 @@ string getDay(weekDays d)
     case SU:
         return "Sunday";
     default:
-        return "You typed something wrong!";
+        return "You typed something wrong!"
     }
-}
 
-int main()
-{
-    cout << getDay(TH) << endl;
-    return 0;
 }

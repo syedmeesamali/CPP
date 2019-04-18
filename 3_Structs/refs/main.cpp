@@ -1,18 +1,23 @@
 #include <iostream>
 using namespace std;
+void swap(int &, int &);
 
 int main()
 {
-    string name = "Ali";
+    int a = 15;
+    int b = 20;
 
-    cout <<"Name is : "<< name <<" and address is: " << &name << endl;
-    //Reference variable must always be initialized
-    string &no_1 = name;
-    cout <<"Name is : "<< no_1 <<" and address is: " << &no_1 << endl;
-
-    no_1 = "Meesam";
-    cout <<"Name is : "<< name <<" and address is: " << &name << endl;
-    cout <<"Name is : "<< no_1 <<" and address is: " << &no_1 << endl;
+    swap (a,b);
+    cout <<"a is now: " << a << endl;
+    cout <<"b is now: " << b << endl;
 
     return 0;
+}
+
+void swap(int &a, int &b)
+{
+    int t;
+    t = a;
+    a = b;
+    b = t;
 }

@@ -5,13 +5,12 @@ class person
 {
 private:
     int code;
-
-public:
     string name;
     int age;
     string gender;
     int weight;
 
+public:
     //Below is a constructor for class person
     person(string a, int b, string c, int d)
     {
@@ -57,14 +56,26 @@ public:
     }
 
 };
+//Defining new class below called as Employee
+//It will INHERIT all the properties of person class
+
+class Employee: public person
+{
+    public:
+    Employee(string a, int b, string c, int d) : person(a,b,c,d)
+    {
+
+    }
+};
+
 
 int main()
 {
     person ali("Meesam", 31, "male", 59);
     ali.printInfo();
-    person shah = person();
-    ali.getCode();
-    ali.setCode(340);
-    shah.printInfo();
+    Employee meesam = Employee("Meesam shah", 32, "male", 62);
+    meesam.printInfo();
+    meesam.getCode();
+
     return 0;
 }

@@ -12,8 +12,8 @@ int main()
 {
     cout <<"Multiplication using template class: " << endl;
     cout << "5 * 3: " << multiply(5, 3) << endl;
-    //cout << "5 * 3.0: " << multiply(5, 3.0) << endl;
     cout << "5.0 * 3.0: " << multiply(5.0, 3.0) << endl;
-
+    //The below won't work as BOTH types should be int or double
+    //cout << "5 * 3.0: " << multiply(5, 3.0) << endl;
     return 0;
 }

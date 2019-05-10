@@ -30,6 +30,7 @@ public:
 int main()
 {
     IntMathTools mathtools = IntMathTools();
-
+    cout << mathtools.add(3,2) <<endl;
+    cout << mathtools.divide(5,3) <<endl;
     return 0;
 }

@@ -32,7 +32,9 @@ int main()
 {
     MathTools<int> intMaths;
     MathTools<double> dblMaths;
+    MathTools<string> stringMaths;
     cout << intMaths.add(3.2, 5.2) <<endl;
     cout << dblMaths.add(3.2, 5.2) <<endl;
+    cout << stringMaths.add("ali ", "shah") <<endl;
     return 0;
 }

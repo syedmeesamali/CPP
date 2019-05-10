@@ -1,26 +1,27 @@
 #include <iostream>
 using namespace std;
 
-class IntMathTools
+template <class T>
+class MathTools
 {
 
 public:
-    int multiply(int a, int b)
+    T multiply(T a, T b)
     {
         return a * b;
     }
 
-    int divide(int a, int b)
+    T divide(T a, T b)
     {
         return a / b;
     }
 
-    int add(int a, int b)
+    T add(T a, T b)
     {
         return a + b;
     }
 
-    int subtract(int a, int b)
+    T subtract(T a, T b)
     {
         return a - b;
     }
@@ -29,8 +30,9 @@ public:
 
 int main()
 {
-    IntMathTools mathtools = IntMathTools();
-    cout << mathtools.add(3,2) <<endl;
-    cout << mathtools.divide(5,3) <<endl;
+    MathTools<int> intMaths;
+    MathTools<double> dblMaths;
+    cout << intMaths.add(3.2, 5.2) <<endl;
+    cout << dblMaths.add(3.2, 5.2) <<endl;
     return 0;
 }

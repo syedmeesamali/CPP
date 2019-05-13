@@ -10,6 +10,9 @@ int main()
 
     int* ptr = &myAge;  //Pointer variable stores LOCATION of another variable
     cout <<"Pointer points to location: " << ptr << endl;
+    cout <<"Value pointed by pointer is: " << (*ptr) << endl;
+    (*ptr)++;
+    cout <<"Age value is: " <<myAge << endl;
 
     return 0;
 }

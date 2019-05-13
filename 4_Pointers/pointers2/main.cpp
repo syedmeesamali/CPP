@@ -2,6 +2,12 @@
 
 using namespace std;
 
+void increment(int* newptr)
+{
+    (*newptr)++;
+    cout <<"Age value: " << *newptr << endl;
+}
+
 int main()
 {
     int myAge = 33;
@@ -12,7 +18,10 @@ int main()
     cout <<"Pointer points to location: " << ptr << endl;
     cout <<"Value pointed by pointer is: " << (*ptr) << endl;
     (*ptr)++;
-    cout <<"Age value is: " <<myAge << endl;
 
+    increment(ptr);
+    increment(ptr);
+
+    cout <<"Age value is: " <<myAge << endl;
     return 0;
 }

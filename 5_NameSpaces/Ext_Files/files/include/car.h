@@ -6,6 +6,8 @@ class car
 {
     public:
         car();
+        void blowHorn();
+
         virtual ~car();
 
     protected:

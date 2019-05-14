@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1557828412 source:c:\users\syed\desktop\c++\cpp\5_namespaces\ext_files\files\src\car.cpp
+	<iostream>
+	"car.h"
+
+1557828415 c:\users\syed\desktop\c++\cpp\5_namespaces\ext_files\files\include\car.h
+

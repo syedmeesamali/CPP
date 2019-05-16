@@ -3,15 +3,31 @@
 
 int main()
 {
-    int a = 0;
-    while (a < 5)
+    int marks[10];
+    int sum = 0;
+    int avg = 0; int count = 0;
+    for (int i=0; i<10; i++)
     {
-        a++;
-        if (a == 3)
-        {
-            printf("Inside if loop \n");
-        }
-        printf("a = %d \n",a);
+        scanf("%d",&marks[i]);
+        sum += marks[i];
     }
+
+    for (int j=0; j<10; j++)
+    {
+        printf("%d  ",marks[j]);
+    }
+
+    printf("\nSum is %d \n", sum);
+    avg = sum / 10;
+    printf("Average is %d \n", avg);
+    for (int a=0; a<10; a++)
+    {
+        if (marks[a] > avg)
+        {
+            count++;
+        }
+    }
+    printf("Above Average is %d \n", count);
+
     return 0;
 }

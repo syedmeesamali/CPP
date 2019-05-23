@@ -15,12 +15,21 @@ int main()
     cout << &a[0] << endl;  //Name of an array is also a pointer
     cout << &a[1] << endl;
     cout << &a[2] << endl;
+
     cout <<endl << endl <<endl;
     cout << a << endl;
     cout << a+1 << endl;
     cout << a+2 << endl;
+
     cout <<endl << endl <<endl;
     cout << *a << endl;
     cout << *(a+1) << endl;
     cout << *(a+2) << endl;
+
+    cout <<endl << endl <<endl;
+    int *p2 = &a[0];
+
+    cout << *p2 << endl;
+    cout << ++ *p2 << endl;
+    cout << *++p2 << endl;
 }

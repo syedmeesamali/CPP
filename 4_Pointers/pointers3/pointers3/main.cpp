@@ -32,4 +32,5 @@ int main()
     cout << *p2 << endl;
     cout << ++ *p2 << endl;
     cout << *++p2 << endl;
+    cout << *p2++ << endl;
 }

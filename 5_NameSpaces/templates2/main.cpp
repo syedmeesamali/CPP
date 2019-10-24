@@ -1,27 +1,28 @@
 #include <iostream>
 using namespace std;
+//Generalization of functions
 
-template <class T>
+template <class Mine>
 class MathTools
 {
 
 public:
-    T multiply(T a, T b)
+    Mine multiply(Mine a, Mine b)
     {
         return a * b;
     }
 
-    T divide(T a, T b)
+    Mine divide(Mine a, Mine b)
     {
         return a / b;
     }
 
-    T add(T a, T b)
+    Mine add(Mine a, Mine b)
     {
         return a + b;
     }
 
-    T subtract(T a, T b)
+    Mine subtract(Mine a, Mine b)
     {
         return a - b;
     }
@@ -33,7 +34,7 @@ int main()
     MathTools<int> intMaths;
     MathTools<double> dblMaths;
     MathTools<string> stringMaths;
-    cout << intMaths.add(3.2, 5.2) <<endl;
+    cout << MathTools.add<double, double>(3.2, 5.2) <<endl;
     cout << dblMaths.add(3.2, 5.2) <<endl;
     cout << stringMaths.add("ali ", "shah") <<endl;
     return 0;

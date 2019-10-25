@@ -25,8 +25,10 @@ int main()
     {
         cout << text[i] << endl;
     }
-    char ch = text[0];
+    char ch[] = "ali";
     cout << "char is: " << ch << endl;
+    cout << "pointer is: " << *ch << endl;
+    cout << "pointer + 3: " << *(ch+3) << endl;
     return 0;
 }
 /*

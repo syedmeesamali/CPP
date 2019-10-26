@@ -15,7 +15,7 @@ Point2D add(Point2D var1, Point2D var2)
 using namespace std;
 int main()
 {
-    int nums[] = {7, 5, 9, 8, 6, 15, 23, 29, 35, 40};
+    int nums[] = {7, 5, 9, 8, 6, 15, 23, 29, 40, 35};
     int Size = sizeof(nums) / sizeof(int);
     cout <<"Size is: " << Size << endl;
     int x = 0;
@@ -23,18 +23,19 @@ int main()
     int y = 0;
     int counter = 0;
     int tmp;
-    while (y < Size )
+    /*while (y < Size )
     {
         cout << "Nums[" << y << "] is: " << nums[y] << endl;
         y++;
     }
-    cout <<"Trying to sort below !!" << endl;
-
+    cout <<"Trying to sort below Size is: " << Size << endl;
+    */
     do
     {
         while (x < Size)
         {
             if (nums[x] > nums[x+1])
+            cout <<"Counter is now: " << counter << endl;
             counter = counter++ ;
             {
                 tmp = nums[x];
@@ -44,7 +45,7 @@ int main()
             }
             cout << "Nums[" << x << "] is: " << nums[x] << endl;
             x++;
-        }
+        } cout <<"Counter now: " << counter << endl;
     } while (counter > 0); //Check for the shuffle iterations
 
     cout <<"New loop below! i is now: " << i << endl;

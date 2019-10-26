@@ -20,15 +20,28 @@ using namespace std;
 
 int main()
 {
-    string text = "meesam";
-    for (int i=0; i<text.length(); i++)
+    int nums[] = {7, 5, 9, 8, 6, 15, 23, 29, 35, 40};
+    int Size = sizeof(nums) / sizeof(int);
+    int x = 0;
+    int i = 0;
+    while (x < Size)
     {
-        cout << text[i] << endl;
+        cout << "Nums[" << x << "] is: " << nums[x] << endl;
+        if (nums[x] > nums[x+1])
+        {
+            nums[x+1] = nums[x];
+            nums[x] = nums[x+1];
+        }
+        x++;
     }
-    char ch[] = "ali";
-    cout << "char is: " << ch << endl;
-    cout << "pointer is: " << *ch << endl;
-    cout << "pointer + 3: " << *(ch+3) << endl;
+    cout <<"new loop below:" << endl;
+    cout <<"Size is: " << Size << endl;
+    while (i < Size)
+    {
+        cout << "Nums[" << i << "] is: " << nums[i] << endl;
+        i++;
+    }
+
     return 0;
 }
 /*

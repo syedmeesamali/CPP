@@ -22,21 +22,35 @@ int main()
 {
     int nums[] = {7, 5, 9, 8, 6, 15, 23, 29, 35, 40};
     int Size = sizeof(nums) / sizeof(int);
+    cout <<"Size is: " << Size << endl;
     int x = 0;
     int i = 0;
+    int y = 0;
+    int tmp;
+    while (y < Size )
+    {
+        cout << "Nums[" << y << "] is: " << nums[y] << endl;
+        y++;
+    }
+    cout <<"Trying to sort below !!" << endl;
     while (x < Size)
     {
-        cout << "Nums[" << x << "] is: " << nums[x] << endl;
         if (nums[x] > nums[x+1])
         {
-            nums[x+1] = nums[x];
+            tmp = nums[x];
+            cout<< tmp << " <---> " << nums[x+1] << endl;
             nums[x] = nums[x+1];
+            cout<< nums[x] << " <---> " << nums[x+1] << endl;
+            nums[x+1] = tmp;
+            cout<< nums[x+1] << " <---> " << tmp << endl;
         }
+        cout << "Nums[" << x << "] is: " << nums[x] << endl;
         x++;
     }
-    cout <<"new loop below:" << endl;
-    cout <<"Size is: " << Size << endl;
-    while (i < Size)
+    cout <<"New loop below! i is now: " << i << endl;
+    int Size1 = sizeof(nums) / sizeof(int);
+    cout <<"Size1 is: " << Size1 << endl;
+    while (i < Size1 )
     {
         cout << "Nums[" << i << "] is: " << nums[i] << endl;
         i++;

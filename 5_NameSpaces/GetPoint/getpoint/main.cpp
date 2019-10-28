@@ -38,10 +38,8 @@ int main()
 
     cout <<"New loop below! i is now: " << i << endl;
     int Size1 = sizeof(nums) / sizeof(int);
-    cout <<"Size1 is: " << Size1 << endl;
     while (i < Size1 )
-    {
-        cout << "Nums[" << i << "] is: " << nums[i] << endl;
+    {   cout << "Nums[" << i << "] = " << nums[i] << endl;
         i++;
     }
     return 0;

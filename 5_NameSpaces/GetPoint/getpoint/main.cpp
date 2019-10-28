@@ -1,52 +1,40 @@
 #include <iostream>
-/*void OperationOnPoints();
-template<typename t, typename t2>
-t add(t var1, t var2)
-{
-    return var1 + var2;
-}
-template<>
-Point2D add(Point2D var1, Point2D var2)
-{
-    Point2D temp;
-    temp.setX(var1.getX + var2.getX);
 
-} */
+//Swap if one is bigger than other
+void swap(int* x, int* y)
+{
+    int* tmp = x;
+    *x = *y;
+    *y = *tmp;
+}
+//Check which one is bigger
+bool max(int x, int y)
+{
+    return (x>y)?true:false;
+}
 using namespace std;
 int main()
 {
-    int nums[] = {7, 5, 9, 8, 6, 15, 23, 29, 40, 35};
+    int nums[] = {7, 5, 9, 8, 6, 15, 29, 23, 40, 35};
     int Size = sizeof(nums) / sizeof(int);
     cout <<"Size is: " << Size << endl;
-    int x = 0;
-    int i = 0;
-    int y = 0;
-    int counter = 0;
-    int tmp;
-    /*while (y < Size )
-    {
-        cout << "Nums[" << y << "] is: " << nums[y] << endl;
-        y++;
-    }
-    cout <<"Trying to sort below Size is: " << Size << endl;
-    */
-    do
-    {
-        while (x < Size)
-        {
-            if (nums[x] > nums[x+1])
-            cout <<"Counter is now: " << counter << endl;
-            counter = counter++ ;
+    int x = 0, i = 0, counter = 0, mCount = 0;
+    do { while (x < Size)
+        {   if (max(nums[x], nums[x+1]) == true)
             {
-                tmp = nums[x];
-                nums[x] = nums[x+1];
-                nums[x+1] = tmp;
-                counter = counter - 1; //Decrease count for every good shuffle
+                counter = counter + 1;
+                swap(nums[x], nums[x+1]);
+                cout << "Nums[" << x << "] is: " << nums[x] << endl;
             }
-            cout << "Nums[" << x << "] is: " << nums[x] << endl;
+            counter = counter - 1;
             x++;
+            if (counter > 1)
+            {
+                mCount = mCount + 1;
+            }
         } cout <<"Counter now: " << counter << endl;
-    } while (counter > 0); //Check for the shuffle iterations
+       mCount = mCount - 1;
+    } while (mCount > 0); //Check for the shuffle iterations
 
     cout <<"New loop below! i is now: " << i << endl;
     int Size1 = sizeof(nums) / sizeof(int);
@@ -58,9 +46,3 @@ int main()
     }
     return 0;
 }
-/*
-void OperationOnPoints()
-{
-    Point2D
-}
-*/

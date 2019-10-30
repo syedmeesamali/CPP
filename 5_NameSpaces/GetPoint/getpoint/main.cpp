@@ -7,34 +7,28 @@ void swap(int* x, int* y)
     *x = *y;
     *y = *tmp;
 }
-//Check which one is bigger
-bool max(int x, int y)
-{
-    return (x>y)?true:false;
-}
+
 using namespace std;
 int main()
 {
     int nums[] = {7, 5, 9, 8, 6, 15, 29, 23, 40, 35};
     int Size = sizeof(nums) / sizeof(int);
     cout <<"Size is: " << Size << endl;
-    int x = 0, i = 0, counter = 0, mCount = 0;
-    do { while (x < Size)
-        {   if (max(nums[x], nums[x+1]) == true)
+    int x = 0; int i = 0; int j = 0; int k = 0; int swaps = 0;
+    for (j=0; j<Size; j++)
+    {
+        for (k=0; k<Size-j; k++)
+        {
+            swaps = 0;
+            if (nums[k] > nums[k+1])
             {
-                counter = counter + 1;
-                swap(nums[x], nums[x+1]);
-                cout << "Nums[" << x << "] is: " << nums[x] << endl;
-            }
-            counter = counter - 1;
-            x++;
-            if (counter > 1)
-            {
-                mCount = mCount + 1;
-            }
-        } cout <<"Counter now: " << counter << endl;
-       mCount = mCount - 1;
-    } while (mCount > 0); //Check for the shuffle iterations
+                swap(nums[k], nums[k+1]);
+                cout << "Nums[" << k << "] is: " << nums[k] << endl;
+                swaps++;
+            } //End of if
+        } //End of inner for loop
+        if (swaps == 0)  {   break;   }
+    } //End of outer for loop
 
     cout <<"New loop below! i is now: " << i << endl;
     int Size1 = sizeof(nums) / sizeof(int);

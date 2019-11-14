@@ -24,5 +24,6 @@ int main()
     {   cout << "Nums[" << i << "] = " << nums[i] << endl;
         i++;
     }
+    cout << sizeof('A');
     return 0;
 }
